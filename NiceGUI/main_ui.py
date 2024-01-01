@@ -87,7 +87,5 @@ with ui.scene().classes('w-full h-64') as scene:
     box1 = scene.box().material('blue').move(x=1.5, y=0.5, z=0.5)
     box2 = scene.box().material('red').move(x=-1.5, y=-0.5, z=0.5)
 
-    scene.box(3 , 3 , 0.2).material('black').move(x=14.5, y=2, z= 0.8)
-
 ui.run()
 # # __----------------------------------------------------------------------------------------------------------__
