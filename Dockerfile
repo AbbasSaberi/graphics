@@ -9,4 +9,4 @@ COPY . ./
 EXPOSE 8080
 ENV PYTHONUNBUFFERED True
 
-CMD ["python", "problems_ui.py"]
+CMD ["python", "main_ui"]
