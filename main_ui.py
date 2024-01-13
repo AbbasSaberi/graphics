@@ -78,7 +78,7 @@ with ui.scene().classes('w-full h-64') as scene:
 # pleyer 2
     box2 = scene.box().material('red').move(x=1, y=-48, z=1)
 
-    scene.box(3 , 1 , 1).material('yello').move(x=0 , y=46.5 , z=0)
+    scene.box(3 , 1 , 1).material('yellow').move(x=0 , y=46.5 , z=0)
 
     scene.box(3 , 8 , 1).material('gray').move(x=0 , y=-45)
     scene.box(5 , 3 , 1).material('gray').move(x=4 , y=-42.5)
