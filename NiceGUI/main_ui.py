@@ -49,6 +49,7 @@ from nicegui import ui
 from nicegui.events import KeyEventArguments
 
 def handle_key(e: KeyEventArguments):
+    # pleyer 1
     if e.modifiers and e.action.keydown:
         if e.key.arrow_left:
             box1.move(x=box1.x + -1, y=box1.y, z=box1.z)
@@ -58,9 +59,7 @@ def handle_key(e: KeyEventArguments):
             box1.move(x=box1.x, y=box1.y + 1, z=box1.z)
         elif e.key.arrow_down:
             box1.move(x=box1.x, y=box1.y + -1, z=box1.z)
-        elif e.key == '0':
-            box1.move(x=box1.x, y=box1.y, z=box1.z + 1)
-            ui.timer(0.2, lambda: (box1.move(x=box1.x, y=box1.y, z=box1.z - 1)), once=True)
+    # pleyer 2
         if e.key == 'a':
             box2.move(x=box2.x + -1, y=box2.y, z=box2.z)
         elif e.key == 'd':
@@ -69,23 +68,18 @@ def handle_key(e: KeyEventArguments):
             box2.move(x=box2.x, y=box2.y + 1, z=box2.z)
         elif e.key == 's':
             box2.move(x=box2.x, y=box2.y + -1, z=box2.z)
-        elif e.key.shift:
-            box2.move(x=box2.x, y=box2.y, z=box2.z + 1)
-            ui.timer(0.2, lambda: (box2.move(x=box2.x, y=box2.y, z=box2.z - 1)), once=True)
-
 
 keyboard = ui.keyboard(on_key=handle_key)
 
 with ui.scene().classes('w-full h-64') as scene:
 
-    scene.spot_light('green', intensity=10000, distance=100000000000, angle=1999999999999999).move(-40, 0, 2)
-    scene.spot_light('green', intensity=10000, distance=100000000000, angle=1999999999999999).move(40, 0, 2)
-    scene.spot_light('green', intensity=10000, distance=100000000000, angle=1999999999999999).move(0, 40, 2)
-    scene.spot_light('green', intensity=10000, distance=100000000000, angle=1999999999999999).move(0, -40, 2)
-    scene.spot_light('green', intensity=100000000, distance=100000000000, angle=1999999999999999).move(0, 0, 2)
+# pleyer 1
+    box1 = scene.box().material('blue').move(x=-1, y=-48, z=1)
+# pleyer 2
+    box2 = scene.box().material('red').move(x=1, y=-48, z=1)
 
-    box1 = scene.box().material('blue').move(x=1.5, y=0.5, z=0.5)
-    box2 = scene.box().material('red').move(x=-1.5, y=-0.5, z=0.5)
+    scene.box(3 , 8 , 1).material('gray').move(x=0 , y=-45)
+    scene.box(5 , 3 , 1).material('gray').move(x=4 , y=-42.5)
 
 ui.run()
 # # __----------------------------------------------------------------------------------------------------------__
