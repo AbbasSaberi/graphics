@@ -60,13 +60,13 @@ def handle_key(e: KeyEventArguments):
         elif e.key.arrow_down:
             box1.move(x=box1.x, y=box1.y + -1, z=box1.z)
     # pleyer 2
-        if e.key == 'a':
+        if e.key == 'a' or e.key == 'ش':
             box2.move(x=box2.x + -1, y=box2.y, z=box2.z)
-        elif e.key == 'd':
+        elif e.key == 'd' or e.key == 'ی':
             box2.move(x=box2.x + 1, y=box2.y, z=box2.z)
-        elif e.key == 'w':
+        elif e.key == 'w' or e.key == 'ص':
             box2.move(x=box2.x, y=box2.y + 1, z=box2.z)
-        elif e.key == 's':
+        elif e.key == 's' or e.key == 'س':
             box2.move(x=box2.x, y=box2.y + -1, z=box2.z)
 
 keyboard = ui.keyboard(on_key=handle_key)
