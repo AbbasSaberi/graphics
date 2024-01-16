@@ -82,6 +82,10 @@ with ui.scene().classes('w-full h-64') as scene:
 
     scene.box(3 , 8 , 1).material('gray').move(x=0 , y=-45)
     scene.box(5 , 3 , 1).material('gray').move(x=4 , y=-42.5)
+    scene.box(3 , 5 , 1).material('gray').move(x=5 , y=-40.5)
+    scene.box(4 , 3 , 1).material('gray').move(x=8 , y=-39.5)
+    scene.box(3 , 6 , 1).material('gray').move(x=11 , y=-38)
+    scene.box(20 , 3 , 1).material('gray').move(x=2.5 , y=-34)
 
 ui.run()
 # # __----------------------------------------------------------------------------------------------------------__
