@@ -92,7 +92,7 @@ def handle_key(e: KeyEventArguments):
 
 keyboard = ui.keyboard(on_key=handle_key)
 with ui.scene().classes('w-full h-64') as scene1: 
-    scene1.sphere().material('brown').move(z=100)
+    scene1.cylinder().material('brown').move(z=100)
 with ui.scene().classes('w-full h-64') as scene2:
 # pleyer 1
     box1 = scene1.box().material('blue').move(x=1, y=-48, z=1)
